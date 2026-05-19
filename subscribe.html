@@ -8,43 +8,48 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0e1a; color: #f1f5f9; line-height: 1.6; }
 .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-header { padding: 40px 0 32px; text-align: center; }
-.logo-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
+header { padding: 40px 0 24px; text-align: center; }
+.logo-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; }
 .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
 h1 { font-size: 24px; font-weight: 700; }
-.subtitle { color: #94a3b8; font-size: 14px; margin-top: 8px; }
-.price-card { background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08)); border: 1px solid rgba(99,102,241,0.25); border-radius: 16px; padding: 40px 32px; text-align: center; margin: 32px 0; }
+.subtitle { color: #94a3b8; font-size: 14px; }
+.price-card { background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.08)); border: 1px solid rgba(99,102,241,0.25); border-radius: 16px; padding: 32px; text-align: center; margin: 24px 0; }
 .price { font-size: 48px; font-weight: 800; color: #10b981; }
 .period { font-size: 16px; color: #64748b; }
-.features { text-align: left; margin: 24px 0; }
-.feature { padding: 8px 0; color: #cbd5e1; font-size: 15px; }
+.features { text-align: left; margin: 20px 0; }
+.feature { padding: 6px 0; color: #cbd5e1; font-size: 15px; }
 .feature::before { content: "✓ "; color: #10b981; font-weight: bold; }
-.stats { display: flex; justify-content: center; gap: 24px; margin: 24px 0; padding: 16px; background: rgba(255,255,255,0.03); border-radius: 12px; }
+.stats { display: flex; justify-content: center; gap: 24px; margin: 20px 0; padding: 12px; background: rgba(255,255,255,0.03); border-radius: 12px; }
 .stat { text-align: center; }
 .stat-value { font-size: 20px; font-weight: 700; color: #a5b4fc; }
 .stat-label { font-size: 12px; color: #64748b; }
-.signal-preview { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; margin: 24px 0; text-align: left; }
-.signal-preview h3 { font-size: 15px; color: #94a3b8; margin-bottom: 12px; }
-.signal-preview .count { font-size: 24px; font-weight: 700; color: #10b981; }
-.contact-section { margin: 40px 0; padding: 32px; background: #111827; border: 1px solid #1e293b; border-radius: 16px; text-align: center; }
-.contact-section h3 { font-size: 18px; margin-bottom: 24px; }
-.step { display: flex; align-items: flex-start; gap: 16px; text-align: left; margin-bottom: 20px; }
-.step-num { flex-shrink: 0; width: 32px; height: 32px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
-.step-text { padding-top: 4px; }
-.step-text strong { display: block; margin-bottom: 2px; }
-.step-text span { color: #94a3b8; font-size: 14px; }
-.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-size: 18px; font-weight: 600; border-radius: 12px; border: none; cursor: pointer; text-decoration: none; margin-top: 16px; }
-.cta-button:hover { opacity: 0.9; }
-.disclaimer { padding: 16px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; font-size: 13px; color: #64748b; margin-bottom: 32px; }
-footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; font-size: 13px; color: #64748b; }
-.back-link { display: inline-block; color: #6366f1; text-decoration: none; margin-bottom: 24px; font-size: 14px; }
-.back-link:hover { text-decoration: underline; }
+.trial-badge { display: inline-block; padding: 6px 16px; background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; font-size: 13px; font-weight: 600; border-radius: 20px; margin: 12px 0; }
+.payment-section { margin: 32px 0; padding: 32px; background: #111827; border: 1px solid #1e293b; border-radius: 16px; text-align: center; }
+.payment-section h3 { font-size: 18px; margin-bottom: 20px; }
+.payment-method { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.qr-area { width: 220px; height: 220px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 12px 0; }
+.payment-note { color: #94a3b8; font-size: 13px; max-width: 300px; }
+.form-group { margin: 20px 0; text-align: left; }
+.form-group label { display: block; font-size: 14px; color: #94a3b8; margin-bottom: 6px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; background: #1a2332; border: 1px solid #374151; border-radius: 8px; color: #f1f5f9; font-size: 15px; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #6366f1; }
+.submit-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; margin-top: 8px; }
+.submit-btn:hover { opacity: 0.9; }
+.success-msg { display: none; text-align: center; padding: 24px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px; margin-top: 16px; color: #10b981; }
+.wechat-id-box { background: #1a2332; border: 1px solid #6366f1; border-radius: 8px; padding: 12px; margin: 16px 0; font-size: 18px; font-weight: bold; color: #a5b4fc; letter-spacing: 1px; }
+.disclaimer { padding: 16px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; font-size: 13px; color: #64748b; margin: 24px 0; }
+footer { padding: 20px 0; border-top: 1px solid #1e293b; text-align: center; font-size: 13px; color: #64748b; }
+.back-link { display: inline-block; color: #6366f1; text-decoration: none; font-size: 14px; }
+.step-box { background: #1a2332; border-radius: 12px; padding: 16px; margin: 16px 0; text-align: left; }
+.step-box h4 { font-size: 14px; color: #94a3b8; margin-bottom: 8px; }
+.step-box .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.step-box .step:last-child { margin-bottom: 0; }
+.step-num { flex-shrink: 0; width: 24px; height: 24px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; }
+.step-text { padding-top: 2px; font-size: 14px; color: #cbd5e1; }
 </style>
 </head>
 <body>
 <div class="container">
-    <a href="index.html" class="back-link">← 返回信号首页</a>
-
     <header>
         <div class="logo-row"><div class="logo-icon">📊</div><h1>AI量化信号</h1></div>
         <p class="subtitle">AI选股 + 高股息策略 · 双重验证</p>
@@ -52,6 +57,7 @@ footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; fon
 
     <div class="price-card">
         <div class="price">¥299 <span class="period">/月</span></div>
+        <div class="trial-badge">新用户首月 ¥99 体验</div>
         <div class="features">
             <div class="feature">每日AI选股信号（盘后推送）</div>
             <div class="feature">高股息组合推荐</div>
@@ -65,31 +71,86 @@ footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; fon
         </div>
     </div>
 
-    <div class="signal-preview">
-        <h3>今日信号概览</h3>
-        <p><span class="count">9</span> 个信号 · <span class="count">2</span> 个强烈信号</p>
-        <p style="color:#64748b;font-size:13px;margin-top:8px;">订阅后每日查看完整信号详情</p>
+    <div class="payment-section">
+        <h3>扫码订阅</h3>
+        <div class="payment-method">
+            <div class="qr-area" id="qrCode">
+                <div style="color:#374151;font-size:14px;">微信扫码支付</div>
+            </div>
+            <p class="payment-note">
+                1. 扫码支付 ¥299（首月 ¥99）<br>
+                2. 支付成功后填写下方表单<br>
+                3. 我们将通过微信推送每日信号
+            </p>
+        </div>
+
+        <form id="subscribeForm" style="margin-top: 24px;">
+            <div class="form-group">
+                <label>你的微信号（用于接收信号）</label>
+                <input type="text" name="wechat_id" placeholder="请填写你的微信号" required>
+            </div>
+            <div class="form-group">
+                <label>支付后三位数（用于核对）</label>
+                <input type="text" name="payment_note" placeholder="支付金额后三位，如 299">
+            </div>
+            <div class="form-group">
+                <label>备注（可选）</label>
+                <textarea name="message" rows="2" placeholder="有什么特殊需求可以留言"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">提交订阅</button>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+            <div style="font-size:32px;margin-bottom:12px;">✓</div>
+            <div style="font-size:18px;font-weight:700;margin-bottom:8px;">订阅申请已提交</div>
+            <div style="font-size:14px;color:#94a3b8;">请添加微信号 <strong style="color:#10b981;">ai_quant_signals</strong> 获取每日信号</div>
+            <div style="font-size:13px;color:#64748b;margin-top:8px;">我们已收到你的申请，核实后将通过微信推送今日信号</div>
+        </div>
     </div>
 
-    <div class="contact-section">
-        <h3>如何订阅</h3>
+    <div class="step-box">
+        <h4>订阅后你将收到</h4>
         <div class="step">
             <div class="step-num">1</div>
-            <div class="step-text"><strong>扫码关注公众号</strong><span>关注「AI量化信号」公众号</span></div>
+            <div class="step-text">每日盘后9只AI选股信号（含买卖建议）</div>
         </div>
         <div class="step">
             <div class="step-num">2</div>
-            <div class="step-text"><strong>发送"订阅"</strong><span>在公众号后台发送"订阅"获取联系方式</span></div>
+            <div class="step-text">高股息组合推荐 + 分红可持续性分析</div>
         </div>
         <div class="step">
             <div class="step-num">3</div>
-            <div class="step-text"><strong>确认订阅</strong><span>通过微信完成订阅，每日盘后自动推送信号</span></div>
+            <div class="step-text">持仓诊断与调仓建议（每月2次）</div>
         </div>
-        <a href="https://mp.weixin.qq.com/" target="_blank" class="cta-button">前往微信公众号 →</a>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">微信实时推送，不错过任何信号</div>
+        </div>
     </div>
 
-    <div class="disclaimer"><strong style="color:#f59e0b">⚠️ 风险提示：</strong>本报告基于量化模型自动生成，仅供学习研究，不构成投资建议。投资有风险，入市需谨慎。</div>
-    <footer><p>AI量化信号系统 · 数据来源：腾讯财经API + 东方财富</p></footer>
+    <div class="disclaimer">
+        <strong style="color:#f59e0b;">⚠️ 风险提示：</strong>本报告基于量化模型自动生成，仅供学习研究，不构成投资建议。投资有风险，入市需谨慎。
+    </div>
+    <footer>
+        <a href="index.html" class="back-link">← 查看免费信号</a>
+        <p style="margin-top:12px;">AI量化信号系统 · 数据来源：腾讯财经API + 东方财富</p>
+    </footer>
 </div>
+
+<script>
+document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    data.timestamp = new Date().toISOString();
+
+    const subs = JSON.parse(localStorage.getItem('subscriptions') || '[]');
+    subs.push(data);
+    localStorage.setItem('subscriptions', JSON.stringify(subs));
+
+    document.getElementById('subscribeForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+});
+</script>
 </body>
 </html>

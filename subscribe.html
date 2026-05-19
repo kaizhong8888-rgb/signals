@@ -23,24 +23,28 @@ h1 { font-size: 24px; font-weight: 700; }
 .stat { text-align: center; }
 .stat-value { font-size: 20px; font-weight: 700; color: #a5b4fc; }
 .stat-label { font-size: 12px; color: #64748b; }
-.payment-section { margin: 40px 0; padding: 32px; background: #111827; border: 1px solid #1e293b; border-radius: 16px; text-align: center; }
-.payment-section h3 { font-size: 18px; margin-bottom: 24px; }
-.payment-method { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.qr-placeholder { width: 200px; height: 200px; background: #1a2332; border: 2px dashed #374151; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 14px; }
-.payment-note { color: #94a3b8; font-size: 14px; }
-.form-group { margin: 24px 0; text-align: left; }
-.form-group label { display: block; font-size: 14px; color: #94a3b8; margin-bottom: 6px; }
-.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; background: #1a2332; border: 1px solid #374151; border-radius: 8px; color: #f1f5f9; font-size: 15px; }
-.submit-btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-size: 16px; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; }
-.success-msg { display: none; text-align: center; padding: 24px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px; margin-top: 16px; color: #10b981; }
+.signal-preview { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; margin: 24px 0; text-align: left; }
+.signal-preview h3 { font-size: 15px; color: #94a3b8; margin-bottom: 12px; }
+.signal-preview .count { font-size: 24px; font-weight: 700; color: #10b981; }
+.contact-section { margin: 40px 0; padding: 32px; background: #111827; border: 1px solid #1e293b; border-radius: 16px; text-align: center; }
+.contact-section h3 { font-size: 18px; margin-bottom: 24px; }
+.step { display: flex; align-items: flex-start; gap: 16px; text-align: left; margin-bottom: 20px; }
+.step-num { flex-shrink: 0; width: 32px; height: 32px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.step-text { padding-top: 4px; }
+.step-text strong { display: block; margin-bottom: 2px; }
+.step-text span { color: #94a3b8; font-size: 14px; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; background: linear-gradient(135deg, #10b981, #059669); color: #fff; font-size: 18px; font-weight: 600; border-radius: 12px; border: none; cursor: pointer; text-decoration: none; margin-top: 16px; }
+.cta-button:hover { opacity: 0.9; }
 .disclaimer { padding: 16px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; font-size: 13px; color: #64748b; margin-bottom: 32px; }
 footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; font-size: 13px; color: #64748b; }
 .back-link { display: inline-block; color: #6366f1; text-decoration: none; margin-bottom: 24px; font-size: 14px; }
-.trial-badge { display: inline-block; padding: 6px 16px; background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; font-size: 13px; font-weight: 600; border-radius: 20px; margin: 16px 0; }
+.back-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="container">
+    <a href="index.html" class="back-link">← 返回信号首页</a>
+
     <header>
         <div class="logo-row"><div class="logo-icon">📊</div><h1>AI量化信号</h1></div>
         <p class="subtitle">AI选股 + 高股息策略 · 双重验证</p>
@@ -61,49 +65,31 @@ footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; fon
         </div>
     </div>
 
-    <div class="payment-section">
-        <h3>立即订阅</h3>
-        <div class="trial-badge">新用户首月 ¥99 体验</div>
-        <div class="payment-method">
-            <div class="qr-placeholder">
-                <span>微信扫码支付</span>
-            </div>
-            <p class="payment-note">扫码支付后，截图发送至微信号获取信号</p>
+    <div class="signal-preview">
+        <h3>今日信号概览</h3>
+        <p><span class="count">9</span> 个信号 · <span class="count">2</span> 个强烈信号</p>
+        <p style="color:#64748b;font-size:13px;margin-top:8px;">订阅后每日查看完整信号详情</p>
+    </div>
+
+    <div class="contact-section">
+        <h3>如何订阅</h3>
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text"><strong>扫码关注公众号</strong><span>关注「AI量化信号」公众号</span></div>
         </div>
-        <form id="subscribeForm" style="margin-top: 24px;">
-            <div class="form-group">
-                <label>微信号（用于接收信号）</label>
-                <input type="text" name="wechat_id" placeholder="你的微信号" required>
-            </div>
-            <div class="form-group">
-                <label>支付截图备注（可选）</label>
-                <input type="text" name="payment_note" placeholder="支付后三位数或备注">
-            </div>
-            <button type="submit" class="submit-btn">提交订阅</button>
-        </form>
-        <div class="success-msg" id="successMsg">
-            ✓ 订阅申请已提交！请添加微信号获取每日信号
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text"><strong>发送"订阅"</strong><span>在公众号后台发送"订阅"获取联系方式</span></div>
         </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text"><strong>确认订阅</strong><span>通过微信完成订阅，每日盘后自动推送信号</span></div>
+        </div>
+        <a href="https://mp.weixin.qq.com/" target="_blank" class="cta-button">前往微信公众号 →</a>
     </div>
 
     <div class="disclaimer"><strong style="color:#f59e0b">⚠️ 风险提示：</strong>本报告基于量化模型自动生成，仅供学习研究，不构成投资建议。投资有风险，入市需谨慎。</div>
     <footer><p>AI量化信号系统 · 数据来源：腾讯财经API + 东方财富</p></footer>
 </div>
-
-<script>
-document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    data.timestamp = new Date().toISOString();
-
-    const subs = JSON.parse(localStorage.getItem('subscriptions') || '[]');
-    subs.push(data);
-    localStorage.setItem('subscriptions', JSON.stringify(subs));
-
-    document.getElementById('subscribeForm').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-});
-</script>
 </body>
 </html>

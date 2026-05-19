@@ -32,7 +32,7 @@ def load_latest_signal() -> Optional[dict]:
 
 
 def generate_index_html(data: dict) -> str:
-    """生成 index.html"""
+    """生成 index.html - Freemium: 1免费信号 + 其余模糊隐藏"""
     today = data['date']
     total = data['total_signals']
     strong = data['strong_signals']
@@ -40,9 +40,13 @@ def generate_index_html(data: dict) -> str:
     ai_positive = data['market_summary']['ai_positive_growth']
     signals = data['signals']
 
-    # 信号卡片
+    # 只显示第1个信号作为免费预览
+    free_signal = signals[0] if signals else None
+    hidden_count = len(signals) - 1 if signals else 0
+
     cards = ''
-    for i, s in enumerate(signals, 1):
+    if free_signal:
+        s = free_signal
         is_strong = s['strength'] == 'STRONG'
         border_color = '#10b981' if is_strong else '#f59e0b'
         badge_bg = 'rgba(16,185,129,0.15)' if is_strong else 'rgba(245,158,11,0.15)'
@@ -56,7 +60,7 @@ def generate_index_html(data: dict) -> str:
         cards += f"""        <div class="signal-card" style="border-left-color: {border_color};">
             <div class="signal-top">
                 <div>
-                    <div class="signal-name">{i}. {s['name']}</div>
+                    <div class="signal-name">1. {s['name']}</div>
                     <div class="signal-code">{s['code']}</div>
                 </div>
                 <span class="signal-badge" style="background:{badge_bg};color:{badge_color};border-color:{badge_color};">{badge_label}</span>
@@ -68,6 +72,29 @@ def generate_index_html(data: dict) -> str:
                 <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:{profit_color};">{profit_sign}{profit_growth:.1f}%</span></div>
             </div>
             <div class="signal-reason">\U0001f4a1 {s['reason']}</div>
+        </div>
+"""
+
+    # 隐藏信号 + 订阅引导
+    if hidden_count > 0:
+        cards += f"""        <div class="locked-signals" style="position:relative;margin-bottom:12px;">
+            <div class="blur-overlay" style="filter:blur(4px);opacity:0.3;pointer-events:none;">"""
+
+        for i, s in enumerate(signals[1:], 2):
+            is_strong = s['strength'] == 'STRONG'
+            border_color = '#10b981' if is_strong else '#f59e0b'
+            cards += f"""                <div class="signal-card" style="border-left-color: {border_color};">
+                    <div class="signal-top"><div><div class="signal-name">{i}. ??</div><div class="signal-code">??????</div></div></div>
+                    <div class="signal-metrics"><div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥??.??</span></div></div>
+                </div>
+"""
+        cards += f"""            </div>
+            <div class="lock-message" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:10;">
+                <div style="font-size:48px;margin-bottom:12px;">🔒</div>
+                <div style="font-size:18px;font-weight:700;margin-bottom:8px;">还有 {hidden_count} 个信号等你查看</div>
+                <div style="color:#94a3b8;margin-bottom:16px;">订阅即可查看完整信号 + 买卖建议</div>
+                <a href="subscribe.html" class="cta-button" style="text-decoration:none;display:inline-flex;">解锁全部信号 ¥299/月 →</a>
+            </div>
         </div>
 """
 

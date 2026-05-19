@@ -1,0 +1,125 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T09:55:31.053133",
+  "total_signals": 9,
+  "strong_signals": 2,
+  "moderate_signals": 7,
+  "signals": [
+    {
+      "type": "BUY",
+      "strength": "STRONG",
+      "code": "600066",
+      "name": "宇通客车",
+      "price": 31.68,
+      "reason": "高ROE(33.64%) + 高成长(31.67%)，AI评分0.96",
+      "strategy": "quality_growth",
+      "pe": 12.85,
+      "roe": 33.64,
+      "profit_growth": 31.67
+    },
+    {
+      "type": "BUY",
+      "strength": "STRONG",
+      "code": "600050",
+      "name": "中国联通",
+      "price": 4.92,
+      "reason": "双策略共振！股息率2.77%，ROE:5.4%，AI评分:2.57",
+      "strategy": "dividend",
+      "pe": 16.8,
+      "roe": 5.4,
+      "profit_growth": 0.9
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "600160",
+      "name": "巨化股份",
+      "price": 32.8,
+      "reason": "高ROE(19.21%) + 高成长(15.25%)，AI评分2.22",
+      "strategy": "quality_growth",
+      "pe": 21.33,
+      "roe": 19.21,
+      "profit_growth": 15.25
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "600114",
+      "name": "东睦股份",
+      "price": 32.46,
+      "reason": "高ROE(15.43%) + 高成长(24.37%)，AI评分1.57",
+      "strategy": "quality_growth",
+      "pe": 37.27,
+      "roe": 15.43,
+      "profit_growth": 24.37
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "600089",
+      "name": "特变电工",
+      "price": 26.86,
+      "reason": "低估值(PE:22.0) + 成长(101.05%)",
+      "strategy": "value_growth",
+      "pe": 22.0,
+      "roe": 8.05,
+      "profit_growth": 101.05
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "600060",
+      "name": "海信视像",
+      "price": 24.44,
+      "reason": "低估值(PE:12.8) + 成长(15.28%)",
+      "strategy": "value_growth",
+      "pe": 12.8,
+      "roe": 11.41,
+      "profit_growth": 15.28
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "601318",
+      "name": "中国平安",
+      "price": 54.89,
+      "reason": "高股息(3.3%) + 分红可持续，评分58",
+      "strategy": "dividend",
+      "pe": 7.1,
+      "roe": 13.5,
+      "profit_growth": 7.9
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "601166",
+      "name": "兴业银行",
+      "price": 17.45,
+      "reason": "高股息(5.0%) + 分红可持续，评分55",
+      "strategy": "dividend",
+      "pe": 5.0,
+      "roe": 8.6,
+      "profit_growth": 0.5
+    },
+    {
+      "type": "BUY",
+      "strength": "MODERATE",
+      "code": "000651",
+      "name": "格力电器",
+      "price": 39.71,
+      "reason": "高股息(3.77%) + 分红可持续，评分54",
+      "strategy": "dividend",
+      "pe": 10.3,
+      "roe": 14.9,
+      "profit_growth": 1.7
+    }
+  ],
+  "market_summary": {
+    "ai_total": 20,
+    "ai_positive_growth": 11,
+    "ai_quality_count": 3,
+    "ai_value_growth_count": 4,
+    "dividend_sustainable": 4,
+    "overlap_count": 1
+  }
+}

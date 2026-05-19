@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI量化信号 | 2026-05-19</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0e1a; color: #f1f5f9; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+header { padding: 40px 0 32px; border-bottom: 1px solid #1e293b; margin-bottom: 32px; }
+.logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+h1 { font-size: 28px; font-weight: 700; }
+.subtitle { color: #94a3b8; font-size: 15px; }
+.date-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3); border-radius: 20px; font-size: 13px; color: #a5b4fc; margin-top: 16px; }
+.date-badge::before { content: ""; width: 6px; height: 6px; background: #10b981; border-radius: 50%; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 32px; }
+.stat-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; text-align: center; }
+.stat-value { font-size: 32px; font-weight: 700; }
+.stat-label { font-size: 13px; color: #64748b; margin-top: 4px; }
+.signal-card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; border-left: 3px solid; padding: 20px; margin-bottom: 12px; }
+.signal-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+.signal-name { font-size: 17px; font-weight: 600; }
+.signal-code { font-size: 13px; color: #64748b; font-family: monospace; }
+.signal-badge { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; border: 1px solid; }
+.signal-metrics { display: flex; gap: 24px; margin-bottom: 12px; flex-wrap: wrap; }
+.metric { display: flex; flex-direction: column; }
+.metric-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+.metric-value { font-size: 15px; font-weight: 600; font-family: monospace; }
+.signal-reason { padding: 10px 14px; background: rgba(99,102,241,0.06); border-radius: 8px; font-size: 14px; color: #94a3b8; border-left: 2px solid #6366f1; }
+.cta-section { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(16,185,129,0.08)); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 32px; text-align: center; margin: 40px 0; }
+.cta-price { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin-bottom: 20px; }
+.cta-price .amount { font-size: 40px; font-weight: 800; color: #10b981; }
+.cta-price .period { font-size: 15px; color: #64748b; }
+.cta-features { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; color: #94a3b8; font-size: 14px; }
+.cta-button { display: inline-flex; align-items: center; padding: 14px 32px; background: linear-gradient(135deg, #6366f1, #818cf8); color: #fff; font-size: 16px; font-weight: 600; border-radius: 10px; text-decoration: none; border: none; cursor: pointer; }
+.disclaimer { padding: 16px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; font-size: 13px; color: #64748b; margin-bottom: 32px; }
+footer { padding: 24px 0; border-top: 1px solid #1e293b; text-align: center; font-size: 13px; color: #64748b; }
+@media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo-row"><div class="logo-icon">📊</div><h1>AI量化信号</h1></div>
+        <p class="subtitle">AI选股 + 高股息策略 · 双重验证</p>
+        <div class="date-badge">2026-05-19</div>
+    </header>
+    <div class="stats-grid">
+        <div class="stat-card"><div class="stat-value">9</div><div class="stat-label">信号总数</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#10b981">2</div><div class="stat-label">强烈 ★★★</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#f59e0b">7</div><div class="stat-label">关注 ★★</div></div>
+        <div class="stat-card"><div class="stat-value">11</div><div class="stat-label">AI正成长股</div></div>
+    </div>
+    <div class="section">
+        <h2 style="font-size:18px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:#6366f1;"></span>今日选股信号</h2>
+        
+        <div class="signal-card" style="border-left-color: #10b981;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">1. 宇通客车</div>
+                    <div class="signal-code">600066</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:#10b981;">★★★ 强烈</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥31.68</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">12.8</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">33.6%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+31.7%</span></div>
+            </div>
+            <div class="signal-reason">💡 高ROE(33.64%) + 高成长(31.67%)，AI评分0.96</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #10b981;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">2. 中国联通</div>
+                    <div class="signal-code">600050</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(16,185,129,0.15);color:#10b981;border-color:#10b981;">★★★ 强烈</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥4.92</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">16.8</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">5.4%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+0.9%</span></div>
+            </div>
+            <div class="signal-reason">💡 双策略共振！股息率2.77%，ROE:5.4%，AI评分:2.57</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">3. 巨化股份</div>
+                    <div class="signal-code">600160</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥32.80</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">21.3</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">19.2%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+15.2%</span></div>
+            </div>
+            <div class="signal-reason">💡 高ROE(19.21%) + 高成长(15.25%)，AI评分2.22</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">4. 东睦股份</div>
+                    <div class="signal-code">600114</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥32.46</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">37.3</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">15.4%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+24.4%</span></div>
+            </div>
+            <div class="signal-reason">💡 高ROE(15.43%) + 高成长(24.37%)，AI评分1.57</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">5. 特变电工</div>
+                    <div class="signal-code">600089</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥26.86</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">22.0</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">8.1%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+101.0%</span></div>
+            </div>
+            <div class="signal-reason">💡 低估值(PE:22.0) + 成长(101.05%)</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">6. 海信视像</div>
+                    <div class="signal-code">600060</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥24.44</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">12.8</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">11.4%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+15.3%</span></div>
+            </div>
+            <div class="signal-reason">💡 低估值(PE:12.8) + 成长(15.28%)</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">7. 中国平安</div>
+                    <div class="signal-code">601318</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥54.89</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">7.1</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">13.5%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+7.9%</span></div>
+            </div>
+            <div class="signal-reason">💡 高股息(3.3%) + 分红可持续，评分58</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">8. 兴业银行</div>
+                    <div class="signal-code">601166</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥17.45</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">5.0</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">8.6%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+0.5%</span></div>
+            </div>
+            <div class="signal-reason">💡 高股息(5.0%) + 分红可持续，评分55</div>
+        </div>
+        <div class="signal-card" style="border-left-color: #f59e0b;">
+            <div class="signal-top">
+                <div>
+                    <div class="signal-name">9. 格力电器</div>
+                    <div class="signal-code">000651</div>
+                </div>
+                <span class="signal-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:#f59e0b;">★★ 关注</span>
+            </div>
+            <div class="signal-metrics">
+                <div class="metric"><span class="metric-label">现价</span><span class="metric-value">¥39.71</span></div>
+                <div class="metric"><span class="metric-label">PE</span><span class="metric-value">10.3</span></div>
+                <div class="metric"><span class="metric-label">ROE</span><span class="metric-value">14.9%</span></div>
+                <div class="metric"><span class="metric-label">利润增速</span><span class="metric-value" style="color:#10b981;">+1.7%</span></div>
+            </div>
+            <div class="signal-reason">💡 高股息(3.77%) + 分红可持续，评分54</div>
+        </div>
+    </div>
+    <div class="cta-section">
+        <h2 style="font-size:22px;font-weight:700;margin-bottom:8px;">订阅每日量化信号</h2>
+        <p style="color:#94a3b8;margin-bottom:24px;font-size:15px;">每个交易日盘后自动推送选股信号，双策略交叉验证</p>
+        <div class="cta-price"><span class="amount">¥299</span><span class="period">/月</span></div>
+        <div class="cta-features"><span>✓ 每日AI选股信号</span><span>✓ 高股息组合推荐</span><span>✓ 持仓诊断与建议</span><span>✓ 微信推送通知</span></div>
+        <a href="subscribe.html" class="cta-button" style="text-decoration:none;">立即订阅 ¥299/月 →</a>
+        <p style="margin-top:16px;font-size:13px;color:#64748b;">已验证策略年化收益 ~26% · 最大回撤 ~25% · 夏普比率 1.24</p>
+    </div>
+    <div class="disclaimer"><strong style="color:#f59e0b">⚠️ 风险提示：</strong>本报告基于量化模型自动生成，仅供学习研究，不构成投资建议。投资有风险，入市需谨慎。</div>
+    <footer><p>AI量化信号系统 · 数据来源：腾讯财经API + 东方财富</p></footer>
+</div>
+</body>
+</html>
